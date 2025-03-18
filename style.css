@@ -6,7 +6,8 @@ body{
     background-color: rgb(0, 0, 0, 0.7);
     height: 100vh;
     display: flex;
-
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .container{
@@ -39,9 +40,69 @@ text-align: center;
     flex-direction: column;
     justify-content: space-between;
     gap: 3em;
+    border-radius: 2em;
 }
 
 .title-section, .book-info{
     display: flex;
     justify-content: space-between;
+}
+
+#button-create{
+    background-color: rgb(26, 88, 26,0.6);
+    color: whitesmoke;
+    padding: 1ch;
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+#button-create:hover{
+    box-shadow: 2px 2px 3px gray;
+}
+
+#button-create:active{
+    transform: scale(0.95);
+}
+
+
+
+dialog > form{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 1em;
+}
+
+dialog.form-win {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 500px;
+    padding: 2em;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-book{
+    background-color: rgb(255, 0, 0, 0.4);
+    border: none;
+    outline: none;
+    color: wheat;
+    font-weight: 800;
+    font-size: 1.5ch;
+    border-radius: 1ch;
+    padding: 1ch;
+    cursor: pointer;
+}
+
+.delete-book:hover{
+    background-color: rgb(255, 0, 0, 0.3);
+}
+
+.delete-book:active{
+    transform: scale(0.95);
 }
